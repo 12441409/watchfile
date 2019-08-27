@@ -83,11 +83,10 @@ func (w *Watch) watchDir(dir string) {
  
 func main() {
     watch, _ := fsnotify.NewWatcher()
-    fmt.Println("1111111")
     w := Watch{
         watch: watch,
     }
-    fmt.Println("2222222")
     w.watchDir(os.Args[1]);
     select {};
+    
 }
